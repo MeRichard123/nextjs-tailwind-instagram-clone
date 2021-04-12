@@ -13,13 +13,13 @@ const Home = ({ names }) => {
   const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   return (
-    <div className="px-2 h-full m-auto flex flex-col justify-center lg:max-w-6xl">
+    <div className="h-full m-auto flex flex-col justify-center lg:max-w-6xl">
       <Head>
         <title>Instagram</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="fixed top-0 bg-white w-full lg:max-w-6xl z-50">
-        <nav className="my-5 flex items-center justify-between mx-1.5">
+        <nav className="my-5 flex items-center justify-between mx-1.5 px-2">
           <a href="" className=" font-logo m-1.5 text-3xl">
             Instagram
           </a>
@@ -90,7 +90,7 @@ const Home = ({ names }) => {
             </div>
           ))}
         </section>
-        <div id="wrapper" className="lg:flex">
+        <div id="wrapper" className="lg:flex px-2">
           <section className="mt-5 px-5 self-start">
             {Array.from(Array(RandomRange(4, names.length + 4)).keys()).map(
               (user) => (
